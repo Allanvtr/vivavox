@@ -12,9 +12,17 @@ function Button(props) {
       $padding={props.padding} 
       $fontSize={props.fontSize}
       $margin={props.margin}
+      $hasImage={props.image}
       onClick={props.onClick}
     >
-      {props.text}
+      {props.image && (
+        <img 
+          src={props.image} 
+          alt={props.alt || props.text || "icon"} 
+          style={{ display: 'block' }}
+        />
+      )}
+      {props.text && <span>{props.text}</span>}
     </ButtonContainer>
   );
 }

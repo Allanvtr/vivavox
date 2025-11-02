@@ -13,7 +13,13 @@ export const ButtonContainer = styled.button`
   font-weight: ${({$fontWeight}) => ($fontWeight ? $fontWeight : "400")};
   border: 2px solid #525252;
   margin: ${({$margin}) => ($margin ? $margin : "0")};
-
+  gap: ${({$hasImage}) => ($hasImage ? "8px" : "0")};
+  img {
+    width: 2vw;
+    height: 2vw;
+    object-fit: contain;
+  }
+  
   &:hover {
     cursor: pointer;
     

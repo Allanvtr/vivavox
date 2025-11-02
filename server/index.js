@@ -31,7 +31,7 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.json());
 app.use(cors({
-   origin: ['http://localhost:3000', 'https://624d-179-125-135-210.ngrok-free.app']
+   origin: ['http://localhost:3000']
 }));
 
 app.use('/cell', cellRoutes);
